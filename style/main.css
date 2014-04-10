@@ -1,0 +1,64 @@
+body {
+    font-family: Garamond;
+}
+
+#outerShape {
+    background-color: FireBrick;
+    border:2px solid;
+    border-radius: 25px;
+    max-width: 414px;
+}
+
+#title1 {
+    background-color: white;
+    border: 2px solid;
+    border-radius:25px;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#numeralOut {
+    text-transform: uppercase;
+}
+
+#div1 {
+    width: 85%;
+    margin: auto;
+}
+
+#div3 {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+table {
+    margin-top: -5px;
+    font-size: 1.2em;
+}
+
+img {
+    float: left;
+    margin-top: 10px;
+    margin-left: 35px;
+    width: 150;
+    padding-right: 35px;
+    padding-bottom: 25px;
+}
+
+td {
+    text-align: center;
+}
+
+td + td {
+    text-align: right;
+}
