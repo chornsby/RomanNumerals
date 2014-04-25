@@ -7,7 +7,7 @@ var intToNumeral = function(n) {
     /* Catch edge cases */
     if (n === "" || isNaN(n)) {
         return;
-    } else if (n < 1) {
+    } else if (n < 1 || n > 9999) {
         return;
     }
 
@@ -17,19 +17,19 @@ var intToNumeral = function(n) {
     for (var i = 0; i < symbols.length; i++) {
 
         /* How many times does the symbol occur? */
-        var occurances = Math.floor(n/values[i]);
+        var occurrences = Math.floor(n/values[i]);
 
-        if (occurances === 0) {
+        if (occurrences === 0) {
             continue;
         }
 
         /* Build up output string */
-        for (var j = 0; j < occurances; j++) {
+        for (var j = 0; j < occurrences; j++) {
             stringOut += symbols[i];
         }
 
         /* Decrement n to avoid double-counting */
-        n -= values[i] * occurances;
+        n -= values[i] * occurrences;
     }
 
     /* Change from verbose output to succinct output */
@@ -103,8 +103,10 @@ $(document).ready(function() {
     $numOut.on('input', function() {
         var numeralIn = $numOut.val();
         var numberOut = numeralToInt(numeralIn);
+        var numeralOut = intToNumeral(numberOut);
 
         $numIn.val(numberOut);
+        $numOut.val(numeralOut);
     });
 
 });
