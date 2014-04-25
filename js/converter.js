@@ -7,7 +7,7 @@ var intToNumeral = function(n) {
     /* Catch edge cases */
     if (n === "" || isNaN(n)) {
         return;
-    } else if (n < 1) {
+    } else if (n < 1 || n > 9999) {
         return;
     }
 
